@@ -22,4 +22,13 @@ public class Author {
     public String toString() {
         return name + " " + surname;
     }
+
+    public boolean equals(Object x) {
+        Author author = (Author) x;
+        return (name == author.name) && (surname == author.surname);
+    }
+
+    public int hashCode() {
+        return (name + surname).hashCode();
+    }
 }
